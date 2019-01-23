@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _02_Challenge
+namespace _03_Challenge
 {
-    public class ClaimRepository
+    public class OutingRepository
     {
-        Queue<Claim> _claims = new Queue<Claim>();
+        List<Outing> _outing = new List<Outing>();
 
-        public Queue<Claim> GetClaims()
+        public void AddItemToOuting(Outing outing)
         {
-            return _claims;
+            return _outings;
         }
         public void Enqueue(Claim claim)
         {

@@ -12,11 +12,11 @@ namespace _02_Challenge
         public string ClaimType { get; set; }
         public string ClaimDescription { get; set; }
         public double ClaimAmount { get; set; }
-        public string IncidentDate { get; set; }
-        public string ClaimDate { get; set; }
+        public DateTime IncidentDate { get; set; }
+        public DateTime ClaimDate { get; set; }
         public bool ValidClaim { get; set; }
 
-        public Claim(int claimID, string claimType, string claimDescription, double claimAmount, string incidentDate, string claimDate, bool validClaim)
+        public Claim(int claimID, string claimType, string claimDescription, double claimAmount, DateTime incidentDate, DateTime claimDate, bool validClaim)
         {
             ClaimID = claimID;
             ClaimType = claimType;
