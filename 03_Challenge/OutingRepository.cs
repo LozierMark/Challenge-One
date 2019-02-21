@@ -8,27 +8,37 @@ namespace _03_Challenge
 {
     public class OutingRepository
     {
-        List<Outing> _outing = new List<Outing>();
+        List<OutingEvent> _outingEvent = new List<OutingEvent>();
 
-        public void AddItemToOuting(Outing outing)
+        public void AddOutingToList(OutingEvent outing)
         {
-            return _outings;
-        }
-        public void Enqueue(Claim claim)
-        {
-            _claims.Enqueue(claim);
-        }
-        public void Dequeue()
-        {
-            _claims.Dequeue();
+            _outingEvent.Add(outing);
         }
 
-        public Claim PeekAtClaimQueue()
+        public List<OutingEvent> EventOuting()
         {
-            return _claims.Peek();
+            return _outingEvent;
+        }
+        public decimal TotalCost()
+        {
+            decimal totalCost = 0;
+            foreach (OutingEvent outing in _outingEvent)
+            {
+                totalCost += outing.CostPerEvent;
+            }
+            return totalCost;
         }
 
+        public decimal CostByType(OutingType type)
+        {
+            decimal totalCost = 0m;
+            foreach (OutingEvent outing in _outingEvent)
+            {
+               if(type  == outing.EventType)
+                totalCost += outing.CostPerEvent;
+            }
+            return totalCost;
+        }
            
     }
 }
-

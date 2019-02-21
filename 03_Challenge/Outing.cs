@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace _03_Challenge
 {
-    public class Outing
+    public enum OutingType { Golf,Bowling,AmusementPark,Concert }
+    public class OutingEvent
     {
-        public string EventType { get; set; }
+        public OutingType EventType { get; set; }
         public int NumberPeople  { get; set; }
         public DateTime OutingDate  { get; set; }
         public decimal OutingCPP { get; set; }
         public decimal CostPerEvent { get; set; }
         
-        public Outing(string eventType, int numberPeople,DateTime OutingDate, decimal)
+        public OutingEvent(OutingType eventType, int numberPeople,DateTime outingDate, decimal outingCPP, decimal costPerEvent)
         {
-            ClaimID = claimID;
-            ClaimType = claimType;
-            ClaimDescription = claimDescription;
-            ClaimAmount = claimAmount;
-            IncidentDate = incidentDate;
-            ClaimDate = claimDate;
-            ValidClaim = validClaim;
+            
+            NumberPeople = numberPeople;
+            OutingDate = outingDate;
+            OutingCPP = outingCPP;
+            CostPerEvent = costPerEvent;
+            EventType = eventType
         }
 
-        public Claim()
+        public OutingEvent()
         {
         }
     }

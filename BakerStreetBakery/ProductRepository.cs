@@ -25,12 +25,12 @@ namespace BakerStreetBakery
             _products.Remove(product);
         }
 
-        public bool RemoveProductBySpecifications(string customerName, string productName, BakeType type)
+        public bool RemoveProductBySpecifications(string RiskName, string productName, BakeType type)
         {
             bool successful = false;
             foreach (Product product in _products)
             {
-                if (product.CustomerName == customerName && product.ProductName == productName && product.BakeType == type)
+                if (product.RiskName == RiskName && product.ProductName == productName && product.BakeType == type)
                 {
                     RemoveOrderedProduct(product);
                     successful = true;

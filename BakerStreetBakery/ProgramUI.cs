@@ -61,8 +61,8 @@ namespace BakerStreetBakery
             Console.Clear();
             PrintAllProducts();
 
-            Console.WriteLine("What is the customer name for the order would you like to remove?");
-            string customerName = Console.ReadLine();
+            Console.WriteLine("What is the Risk name for the order would you like to remove?");
+            string RiskName = Console.ReadLine();
 
             Console.WriteLine("What is the name of the product for the order?");
             string productName = Console.ReadLine();
@@ -92,15 +92,15 @@ namespace BakerStreetBakery
                     break;
             }
 
-            bool success = _productRepo.RemoveProductBySpecifications(customerName, productName, type);
+            bool success = _productRepo.RemoveProductBySpecifications(RiskName, productName, type);
             if (success == true)
             {
-                Console.WriteLine($"The order for {customerName} was successfully removed.");
+                Console.WriteLine($"The order for {RiskName} was successfully removed.");
                 Console.ReadKey();
             }
             else
             {
-                Console.WriteLine($"The order for {customerName} was unable to be removed at this time.");
+                Console.WriteLine($"The order for {RiskName} was unable to be removed at this time.");
                 Console.ReadKey();
                 Console.Clear();
                 Menu();
@@ -156,14 +156,14 @@ namespace BakerStreetBakery
             Console.WriteLine($"How many would you like to order");
             int orderAmount = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the customer name for the order.");
-            string customerName = Console.ReadLine();
+            Console.WriteLine("Enter the Risk name for the order.");
+            string RiskName = Console.ReadLine();
 
             decimal orderCost = _productRepo.CalculateCost(type);
-            Product order = new Product(productName, type, orderAmount, customerName, orderCost);
+            Product order = new Product(productName, type, orderAmount, RiskName, orderCost);
 
             _productRepo.AddProductOrderToList(order);
-            Console.WriteLine($"\"{order.ProductName}\" added to list. Customer total is: {orderCost}");
+            Console.WriteLine($"\"{order.ProductName}\" added to list. Risk total is: {orderCost}");
             Console.ReadKey();
         }
 
@@ -171,7 +171,7 @@ namespace BakerStreetBakery
         {
             foreach (Product product in _products)
             {
-                Console.WriteLine($"{product.ProductName} {product.BakeType} {product.OrderBatchSize} {product.CustomerName} {product.OrderCost}");
+                Console.WriteLine($"{product.ProductName} {product.BakeType} {product.OrderBatchSize} {product.RiskName} {product.OrderCost}");
             }
             Console.ReadKey();
         }

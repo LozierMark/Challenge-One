@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{088141FF-1586-4CAF-934C-E8F2EF052B60}</ProjectGuid>
+    <ProjectGuid>{5B62E737-E307-4F8C-9B1C-36F4E3C2DB02}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_03_Challenge</RootNamespace>
-    <AssemblyName>03_Challenge</AssemblyName>
+    <RootNamespace>Challenge_08</RootNamespace>
+    <AssemblyName>Challenge_08</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Outing.cs" />
-    <Compile Include="OutingRepository.cs" />
-    <Compile Include="OutingUI.cs" />
-    <Compile Include="ProgramOuting.cs" />
+    <Compile Include="ProgramRisk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Risk.cs" />
+    <Compile Include="RiskRepository.cs" />
+    <Compile Include="RiskUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

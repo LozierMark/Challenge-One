@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _03_Challenge
+namespace Challenge_04
 {
-    class ProgramOuting
+    class ProgramBadge
     {
         static void Main(string[] args)
         {
-            ProgramUI program = ProgramUI();
-            program.Run
+            ProgramBadgeUI program = new ProgramBadgeUI();
+            program.Run();
         }
     }
 }

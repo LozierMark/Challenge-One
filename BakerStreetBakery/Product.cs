@@ -12,15 +12,15 @@ namespace BakerStreetBakery
         public string ProductName { get; set; }
         public BakeType BakeType { get; set; }
         public int OrderBatchSize { get; set; }
-        public string CustomerName { get; set; }
+        public string RiskName { get; set; }
         public decimal OrderCost { get; set; }
 
-        public Product(string productName, BakeType bakeType, int batchOrder, string customerName, decimal orderCost)
+        public Product(string productName, BakeType bakeType, int batchOrder, string RiskName, decimal orderCost)
         {
             ProductName = productName;
             BakeType = bakeType;
             OrderBatchSize = batchOrder;
-            CustomerName = customerName;
+            RiskName = RiskName;
             OrderCost = orderCost;
         }
 
