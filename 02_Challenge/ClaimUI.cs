@@ -65,12 +65,12 @@ namespace _02_Challenge
             {
                 response = true;
                 // Load initial Claim Data
-                Claim claimItem = new Claim(1, "Car", "Car accident on 464.", 400.00, new DateTime(2018,04,25),new DateTime(2018,04,27), true);
-                _claimRepo.Enqueue(claimItem);
-                Claim claimItem2 = new Claim(2, "House", "House fire in kitchen.", 4000.00, new DateTime(2018,04,26),new DateTime(2018,04,28), true);
-                _claimRepo.Enqueue(claimItem2);
-                Claim claimItem3 = new Claim(3, "Theft", "Stolen pancakes.", 4.00, new DateTime(2018,04,27),new DateTime(2018,04,27), false);
-                _claimRepo.Enqueue(claimItem3);
+                Claim Claimitem = new Claim(1, "Car", "Car accident on 464.", 400.00, new DateTime(2018,04,25),new DateTime(2018,04,27), true);
+                _claimRepo.Enqueue(Claimitem);
+                Claim Claimitem2 = new Claim(2, "House", "House fire in kitchen.", 4000.00, new DateTime(2018,04,26),new DateTime(2018,04,28), true);
+                _claimRepo.Enqueue(Claimitem2);
+                Claim Claimitem3 = new Claim(3, "Theft", "Stolen pancakes.", 4.00, new DateTime(2018,04,27),new DateTime(2018,04,27), false);
+                _claimRepo.Enqueue(Claimitem3);
 
             }
             
@@ -162,11 +162,11 @@ namespace _02_Challenge
             Console.WriteLine("Please enter valid claim:\n");
             bool validClaim = bool.Parse(Console.ReadLine());
 
-            Claim claimItem = new Claim(claimId, claimType, claimDescription, claimAmount, incidentDate,claimDate, validClaim);
+            Claim Claimitem = new Claim(claimId, claimType, claimDescription, claimAmount, incidentDate,claimDate, validClaim);
 
-            _claimRepo.Enqueue(claimItem);
+            _claimRepo.Enqueue(Claimitem);
 
-            Console.WriteLine($"\"{claimItem.ClaimID}\" added to the claim. press any key to continue");
+            Console.WriteLine($"\"{Claimitem.ClaimID}\" added to the claim. press any key to continue");
             Console.ReadKey();
         }
     }
